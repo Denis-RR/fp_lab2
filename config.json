@@ -1,0 +1,132 @@
+{
+  "defaultPolicy": "default",
+  "logFile": "password-generator.log",
+  "policies": {
+    "default": {
+      "description": "Стандартная политика",
+      "minimumLength": 8,
+      "maximumLength": 32,
+      "defaultLength": 12,
+      "characterGroups": {
+        "lowercase": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "uppercase": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "digits": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "special": {
+          "enabled": true,
+          "minimumCount": 1,
+          "characters": "!@#$%^&*"
+        }
+      },
+      "forbiddenCharacters": "",
+      "allowRepeatedCharacters": true,
+      "maximumConsecutiveIdenticalCharacters": 2,
+      "allowSpaces": false,
+      "forbiddenSubstrings": [
+        "password",
+        "qwerty",
+        "123456"
+      ]
+    },
+    "pin": {
+      "description": "Только цифры",
+      "minimumLength": 4,
+      "maximumLength": 8,
+      "defaultLength": 4,
+      "characterGroups": {
+        "lowercase": {
+          "enabled": false,
+          "minimumCount": 0
+        },
+        "uppercase": {
+          "enabled": false,
+          "minimumCount": 0
+        },
+        "digits": {
+          "enabled": true,
+          "minimumCount": 4
+        },
+        "special": {
+          "enabled": false,
+          "minimumCount": 0
+        }
+      },
+      "forbiddenCharacters": "",
+      "allowRepeatedCharacters": true,
+      "maximumConsecutiveIdenticalCharacters": 2,
+      "allowSpaces": false,
+      "forbiddenSubstrings": []
+    },
+    "wifi": {
+      "description": "Пароль для Wi-Fi",
+      "minimumLength": 10,
+      "maximumLength": 24,
+      "defaultLength": 14,
+      "characterGroups": {
+        "lowercase": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "uppercase": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "digits": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "special": {
+          "enabled": true,
+          "minimumCount": 1,
+          "characters": "!@#$%^&*"
+        }
+      },
+      "forbiddenCharacters": " ",
+      "allowRepeatedCharacters": false,
+      "maximumConsecutiveIdenticalCharacters": 1,
+      "allowSpaces": false,
+      "forbiddenSubstrings": [
+        "wifi",
+        "password"
+      ]
+    },
+    "42": {
+      "description": "Пароль для чего-то",
+      "minimumLength": 10,
+      "maximumLength": 24,
+      "defaultLength": 14,
+      "characterGroups": {
+        "lowercase": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "uppercase": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "digits": {
+          "enabled": true,
+          "minimumCount": 2
+        },
+        "special": {
+          "enabled": true,
+          "minimumCount": 1,
+          "characters": "!@#$%^&*"
+        }
+      },
+      "forbiddenCharacters": "Kk",
+      "allowRepeatedCharacters": false,
+      "maximumConsecutiveIdenticalCharacters": 1,
+      "allowSpaces": false,
+      "forbiddenSubstrings": []
+    }
+  }
+}
